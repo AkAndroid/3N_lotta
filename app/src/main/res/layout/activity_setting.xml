@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SettingActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/_40sdp">
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_ios"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:tint="@color/colorAccent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/setting"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/language"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#bce5dd"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <ImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_eng" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:text="English"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_check_circle"
+                app:tint="@color/colorPrimary" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sounds"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_14sdp"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/gray"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:text="@string/sounds"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <com.a3nlotta.customeView.SwitchButton
+                android:id="@+id/switchButtonSounds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:sb_checked_color="@color/colorPrimary"
+                app:sb_checked="false"
+                app:sb_border_width="@dimen/_3sdp"
+                app:sb_checkline_width="0dp"
+                app:sb_checkline_color="@color/colorPrimary"
+                app:sb_uncheckcircle_radius="0dp"
+                app:sb_uncheck_color="@color/white"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/gray"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:text="@string/vibration"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <com.a3nlotta.customeView.SwitchButton
+                android:id="@+id/switchButtonVibration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:sb_checked_color="@color/colorPrimary"
+                app:sb_checked="false"
+                app:sb_border_width="@dimen/_3sdp"
+                app:sb_checkline_width="0dp"
+                app:sb_checkline_color="@color/colorPrimary"
+                app:sb_uncheckcircle_radius="0dp"
+                app:sb_uncheck_color="@color/white"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_14sdp"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/gray"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:text="@string/push"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <com.a3nlotta.customeView.SwitchButton
+                android:id="@+id/switchButtonPush"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:sb_checked_color="@color/colorPrimary"
+                app:sb_checked="false"
+                app:sb_border_width="@dimen/_3sdp"
+                app:sb_checkline_width="0dp"
+                app:sb_checkline_color="@color/colorPrimary"
+                app:sb_uncheckcircle_radius="0dp"
+                app:sb_uncheck_color="@color/white"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/gray"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <com.a3nlotta.customeView.SwitchButton
+                android:id="@+id/switchButtonEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:sb_checked_color="@color/colorPrimary"
+                app:sb_checked="false"
+                app:sb_border_width="@dimen/_3sdp"
+                app:sb_checkline_width="0dp"
+                app:sb_checkline_color="@color/colorPrimary"
+                app:sb_uncheckcircle_radius="0dp"
+                app:sb_uncheck_color="@color/white"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="V 1.0"
+        android:textSize="@dimen/_14sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_24sdp"
+        />
+</LinearLayout>

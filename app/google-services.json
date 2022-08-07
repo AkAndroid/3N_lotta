@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "962272296895",
+    "project_id": "nlotta-84e09",
+    "storage_bucket": "nlotta-84e09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962272296895:android:903a8f71c1817634deeb0a",
+        "android_client_info": {
+          "package_name": "com.a3nlotta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962272296895-t6h6v5u5ojiin6elen4qo15a8tom4u9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFZKzctzOA10bG4DcHCnYNM8sIZg3GMPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962272296895-t6h6v5u5ojiin6elen4qo15a8tom4u9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

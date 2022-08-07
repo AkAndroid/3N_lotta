@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MyPlaysFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMyPlays"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:textSize="@dimen/_14sdp"
+        android:text="@string/you_have_not_registered_any_draw"
+        />
+
+</FrameLayout>

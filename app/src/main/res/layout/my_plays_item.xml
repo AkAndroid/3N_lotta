@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rounded_corner"
+    android:backgroundTint="@color/gray"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_marginEnd="@dimen/_8sdp">
+
+
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_58sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/slider1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:text="Play name"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvDateLabel"
+        app:layout_constraintEnd_toStartOf="@+id/tvRankLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivPlay"
+        app:layout_constraintTop_toTopOf="@+id/ivPlay" />
+
+    <TextView
+        android:id="@+id/tvDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:text="@string/date"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvEntryFeeLabel"
+        app:layout_constraintEnd_toStartOf="@+id/tvRankLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivPlay"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlayName" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        tools:text="02/06/2020"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tvRankLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvDateLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvDateLabel" />
+
+    <TextView
+        android:id="@+id/tvEntryFeeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:text="@string/entree_fees"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatusLabel"
+        app:layout_constraintEnd_toStartOf="@+id/tvRankLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivPlay"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateLabel" />
+
+    <TextView
+        android:id="@+id/tvEntryFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        tools:text="100$"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tvRankLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvEntryFeeLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvEntryFeeLabel" />
+
+    <TextView
+        android:id="@+id/tvStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:text="@string/status"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+        app:layout_constraintEnd_toStartOf="@+id/tvEntryFeeLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivPlay"
+        app:layout_constraintTop_toBottomOf="@+id/tvEntryFeeLabel" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        tools:text="100$"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tvRankLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvStatusLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvStatusLabel" />
+
+    <TextView
+        android:id="@+id/tvRankLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="@string/rank"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvRank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivPlay"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+        app:layout_constraintEnd_toEndOf="@+id/tvRankLabel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tvRankLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvRankLabel" />
+
+    <TextView
+        android:id="@+id/tvLoassLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/loss"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tvWinLabel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlay" />
+
+    <TextView
+        android:id="@+id/tvWinLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/win"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvLoassLabel"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlay" />
+
+
+    <TextView
+        android:id="@+id/tvLoss"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:text="0$"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvWin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLoassLabel" />
+
+    <TextView
+        android:id="@+id/tvWin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:text="0$"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvLoss"
+        app:layout_constraintTop_toBottomOf="@+id/tvWinLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

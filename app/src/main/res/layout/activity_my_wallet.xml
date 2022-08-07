@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.MyPlaysActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/colorPrimary"
+        >
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_ios"
+            app:tint="@color/colorAccent"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/my_wallet"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"
+            />
+    </LinearLayout>
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+
+           android:layout_height="match_parent">
+
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/circleImageView"
+               android:layout_width="@dimen/_40sdp"
+               android:layout_height="@dimen/_40sdp"
+               android:layout_marginStart="@dimen/_8sdp"
+               android:layout_marginTop="@dimen/_8sdp"
+               android:src="@drawable/ic_avtar"
+               app:civ_border_color="@color/black"
+               app:civ_border_width="@dimen/_1sdp"
+               app:civ_circle_background_color="@color/black"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <TextView
+               android:id="@+id/tvUserName"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/black"
+               android:textStyle="bold"
+               android:layout_marginStart="@dimen/_8sdp"
+               app:layout_constraintBottom_toTopOf="@+id/tvUserLocation"
+               app:layout_constraintStart_toEndOf="@+id/circleImageView"
+               app:layout_constraintTop_toTopOf="@+id/circleImageView"
+               app:layout_constraintVertical_chainStyle="packed"
+               tools:text="Devdatta Shinde" />
+
+           <TextView
+               android:id="@+id/tvUserLocation"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_8sdp"
+               android:drawableStart="@drawable/ic_baseline_location_on_24"
+               android:textColor="@color/black"
+               android:textSize="@dimen/_10sdp"
+               android:textStyle="bold"
+               app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
+               app:layout_constraintStart_toEndOf="@+id/circleImageView"
+               app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+               tools:text="Pune, India" />
+
+           <TextView
+               android:id="@+id/tvHistory"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/history"
+               android:layout_marginEnd="@dimen/_8sdp"
+               android:textColor="@color/colorAccent"
+               app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/circleImageView"
+               app:layout_constraintVertical_chainStyle="packed" />
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/cvWallet"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_8sdp"
+               android:layout_marginTop="@dimen/_8sdp"
+               android:background="@drawable/left_rounded_corner"
+               android:backgroundTint="@color/colorPrimary"
+               android:padding="@dimen/_8sdp"
+
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/circleImageView">
+
+               <TextView
+                   android:id="@+id/tvYourBalance"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/your_balance"
+                   android:textColor="@color/white"
+                   app:layout_constraintBottom_toTopOf="@+id/tvBalance"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintVertical_chainStyle="packed" />
+
+               <TextView
+                   android:id="@+id/tvBalance"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="0$"
+                   android:layout_marginTop="@dimen/_8sdp"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/_14sdp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/tvLastWithdraw"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/tvYourBalance" />
+
+               <TextView
+                   android:id="@+id/tvLastWithdraw"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/last_withdraw"
+                   android:textColor="@color/white"
+                   android:layout_marginTop="@dimen/_12sdp"
+                   app:layout_constraintBottom_toTopOf="@+id/tvWithdraw"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/tvBalance" />
+
+               <TextView
+                   android:id="@+id/tvWithdraw"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="0$"
+                   android:layout_marginTop="@dimen/_8sdp"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/_14sdp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/tvLastWithdraw" />
+
+               <ImageView
+                   android:layout_width="@dimen/_150sdp"
+                   android:layout_height="@dimen/_100sdp"
+                   android:src="@drawable/wallet_image"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_margin="@dimen/_8sdp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/cvWallet">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical"
+                   android:text="@string/withdraw_money"
+                   android:textColor="@color/colorAccent"
+                   android:textSize="@dimen/_14sdp"
+                   android:textStyle="bold" />
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   android:layout_marginTop="@dimen/_8sdp"
+                   >
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/etBankName"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="@string/bank_name"
+                       android:inputType="numberPassword"
+                       />
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   android:layout_marginTop="@dimen/_8sdp"
+                   >
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/etAccountName"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="@string/names_on_account"
+                       android:inputType="numberPassword"
+                       />
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   android:layout_marginTop="@dimen/_8sdp"
+                   >
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/etAccountNo"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="@string/account_number"
+                       android:inputType="number"
+                       />
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                    android:visibility="gone"
+                   android:layout_marginTop="@dimen/_8sdp"
+                   >
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/etConfAccountNo"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="@string/confirm_account_number"
+                       android:inputType="number"
+                       />
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   android:layout_marginTop="@dimen/_8sdp"
+                   >
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/etBranchCode"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="@string/bic_swift_code_of_the_bank"
+                       android:inputType="text"
+                       />
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   android:layout_marginTop="@dimen/_8sdp"
+                   >
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/etAmount"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="@string/amount_to_be_withdrawn"
+                       android:inputType="numberDecimal"
+                       />
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   android:layout_marginTop="@dimen/_8sdp"
+                   >
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/etMobileNo"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="@string/mobile_no"
+                       android:inputType="phone"
+                       />
+               </com.google.android.material.textfield.TextInputLayout>
+               <Button
+                   android:id="@+id/btWithdrawn"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/rounded_edittext"
+                   android:backgroundTint="@color/colorPrimary"
+                   android:text="@string/withdrawn"
+                   android:textAllCaps="false"
+                   android:textColor="@color/white"
+                   android:layout_marginTop="@dimen/_16sdp"
+                   />
+           </LinearLayout>
+       </androidx.constraintlayout.widget.ConstraintLayout>
+   </ScrollView>
+</LinearLayout>

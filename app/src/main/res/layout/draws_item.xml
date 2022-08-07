@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/_4sdp"
+    android:layout_margin="@dimen/_8sdp"
+    app:cardUseCompatPadding="true"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_16sdp"
+    >
+    <TextView
+        android:id="@+id/tvHowToPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/how_to_play"
+        android:layout_margin="@dimen/_4sdp"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/rvDraws"
+        android:textColor="@color/white"
+        android:drawablePadding="@dimen/_4sdp"
+        android:backgroundTint="@color/colorAccent"
+        android:background="@drawable/black_background_curved"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_2sdp"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayDraw"
+        android:layout_width="@dimen/_127sdp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/orange"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_draw_ticket"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#2DFFFFFF" />
+        <TextView
+            android:id="@+id/tvDraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Draw"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:text="Every Friday get chance win up to"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDraw" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:text="100$"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMsg" />
+
+        <TextView
+            android:id="@+id/tvEntryFee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="@string/entry_fees"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAmount" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/ic_calender"
+            android:backgroundTint="@color/white"
+            android:paddingTop="@dimen/_14sdp"
+            android:text="7"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMsg" />
+
+        <Button
+            android:id="@+id/btStart"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/circular_corner"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/start"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#00ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_16sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:src="@drawable/thank_you"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:text="@string/message"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btPositive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                tools:text="Back to lobby"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="@+id/cardView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+
+    </style>
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="listPreferredItemHeightSmall">@dimen/_30sdp</item>
+
+    </style>
+
+    <style name="Widget.Design.TextInputLayout" parent="AppTheme">
+        <item name="hintTextAppearance">@style/AppTheme.TextFloatLabelAppearance</item>
+        <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
+        <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow</item>
+    </style>
+
+    <style name="AppTheme.TextFloatLabelAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+</resources>

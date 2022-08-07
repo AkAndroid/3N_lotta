@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender" >
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="country" >
+        <item>Country</item>
+        <item>India</item>
+        <item>US</item>
+        <item>UK</item>
+        <item>UAE</item>
+        <item>Oman</item>
+    </string-array>
+</resources>

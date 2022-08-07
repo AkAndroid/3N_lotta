@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home"/>
+        <item
+            android:id="@+id/nav_wallet"
+            android:icon="@drawable/ic_wallet"
+            android:title="@string/my_wallet"/>
+        <item
+            android:id="@+id/nav_play"
+            android:icon="@drawable/ic_fortune_wheel"
+            android:title="@string/my_play"/>
+        <item
+            android:id="@+id/nav_winners"
+            android:icon="@drawable/ic_trophy"
+            android:visible="false"
+            android:title="@string/all_winners"/>
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_trophy"
+            android:title="@string/feedback"/>
+
+        <item
+            android:id="@+id/nav_refer"
+            android:icon="@drawable/ic_refer"
+            android:title="@string/refer_a_friend"/>
+
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help"
+            android:title="@string/help"/>
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_setting"
+            android:title="@string/setting"/>
+
+        <item
+            android:id="@+id/nav_terms"
+            android:icon="@drawable/ic_terms_and_policy"
+            android:title="@string/terms_and_rules"/>
+
+        <item
+            android:id="@+id/nav_privacy_policy"
+            android:icon="@drawable/ic_terms_and_policy"
+            android:title="@string/privacy_policy"/>
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout"
+            android:visible="false"
+            />
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/login"/>
+    </group>
+
+</menu>

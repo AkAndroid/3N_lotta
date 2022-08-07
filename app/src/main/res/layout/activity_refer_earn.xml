@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.ReferEarnActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_12sdp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:src="@drawable/ic_arrow_back_ios"
+            app:tint="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/refer_and_earn"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        android:backgroundTint="@color/gray"
+        android:elevation="@dimen/_4sdp"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/refer_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/refer_friend_msg"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/rounded_corner_transperent"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="ABCDEFG"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/share"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:columnCount="3"
+        android:useDefaultMargins="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+        <ImageView
+            android:id="@+id/ivFacebook"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="@color/gray"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_facebook_1" />
+
+        <ImageView
+            android:id="@+id/ivWhatsapp"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="@color/gray"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_whatsapp" />
+
+        <ImageView
+            android:id="@+id/ivInstagram"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="@color/gray"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_instagram" />
+
+        <ImageView
+            android:id="@+id/ivMessenger"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="@color/gray"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_messenger" />
+
+        <ImageView
+            android:id="@+id/ivEmail"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="@color/gray"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_gmail1" />
+
+        <ImageView
+            android:id="@+id/ivTwitter"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="@color/gray"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_twitter" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btRefer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/refer"
+        android:textAllCaps="false"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+</androidx.constraintlayout.widget.ConstraintLayout>
